@@ -1,0 +1,16 @@
+# This is a boilerplate parameters config generated for pipeline 'data_science'
+# using Kedro 0.18.2.
+#
+# Documentation for this file format can be found in "Parameters"
+# Link: https://kedro.readthedocs.io/en/0.18.2/kedro_project_setup/configuration.html#parameters
+
+
+n_clust: 7
+
+max_clusters: 10
+min_clusters: 2
+
+visualization_names:
+  - pca_plot: pca_2d_plot.png
+  - biplot: biplot.png
+  - test: test.png

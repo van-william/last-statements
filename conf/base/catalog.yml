@@ -2,3 +2,44 @@
 #
 # Documentation for this file format can be found in "The Data Catalog"
 # Link: https://kedro.readthedocs.io/en/stable/data/data_catalog.html
+
+name_lookup_table:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/names_lookup.csv
+  save_args:
+    index: False
+
+raw_last_statements:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/last_statements_raw.csv
+  save_args:
+    index: False
+
+processed_last_statements:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/last_statements_processed.csv
+  save_args:
+    index: False
+
+transformed_last_statement:
+  type: pandas.CSVDataSet
+  filepath: data/03_primary/last_statements_transformed.csv
+  save_args:
+    index: False
+
+kmeans_model:
+  type: pickle.PickleDataSet
+  filepath: data/06_models/kmeans_model.pickle
+  backend: pickle
+
+n_cluster_output:
+  type: pandas.CSVDataSet
+  filepath: data/07_model_output/n_cluster_output.csv
+  save_args:
+    index: False
+
+optimal_cluster_output:
+  type: pandas.CSVDataSet
+  filepath: data/07_model_output/n_cluster_output.csv
+  save_args:
+    index: False
